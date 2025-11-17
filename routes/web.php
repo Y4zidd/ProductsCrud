@@ -26,4 +26,6 @@ Route::put('/products/{product}', [ProductController::class, 'update'])->name('p
 Route::delete('/products/{product}', [ProductController::class, 'destroy'])->name('products.destroy');
 Route::get('/products/{product}', [ProductController::class,'show'])->name('products.show');
 
+Route::get('/product/export', [ProductController::class, 'export'])->name('products.export');
+
 require __DIR__.'/auth.php';

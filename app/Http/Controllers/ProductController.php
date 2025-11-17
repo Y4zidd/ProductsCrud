@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Product;
 use DB;
 use Illuminate\Http\Request;
+use Maatwebsite\Excel\Facades\Excel;
 
 class ProductController extends Controller
 {
@@ -85,10 +86,13 @@ class ProductController extends Controller
     {
         $product->delete();
 
-        DB::table('products')->truncate(); // for reset auto-increment id
-
         return redirect()->route('products.index')->with('success','Product delelete succesfully');
 
 
+    }
+
+    public function export()
+    {
+        return Excel::download(new \App\Exports\ProductsExport, 'products.xlsx');
     }
 }

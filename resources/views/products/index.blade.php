@@ -10,9 +10,9 @@
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 bg-white border-b border-gray-200">
                     <!-- Product List -->
-                    <div class="mb-4">
-                        <a href="{{ route('products.create') }}" class="px-4 py-2 bg-blue-500 text-white rounded">Add New
-                            Product</a>
+                    <div class="flex justify-between mb-4 ">
+                            <a href="{{ route('products.create') }}" class="px-4 py-2 bg-blue-500 text-white rounded">Add New Product</a>
+                            <a href="{{ route('products.export') }}" class="px-4 py-2 bg-green-500 text-white rounded">Export</a>
                     </div>
 
                     <div class="overflow-x-auto">
