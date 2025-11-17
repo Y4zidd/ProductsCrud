@@ -53,6 +53,7 @@ function something()
 |
 | make a laravel project using blazze, configure your database, make migrations + model + controller using -mcr
 | edit mmigration, field models, make routes/web.php for controllers,fields controllers store,update,delete
-| make views blade files for create,edit,index,show
-|
+| make views blade files for create,edit,index,show, and the end make export or import using maatwebsite/excel
+| composer create-project --prefer-dist laravel/laravel namaApp, php artisan breeze:install, php artisan migrate (do it after make database)
+|,npm install,composer artisan make:model ModelApp -mcr, composer require maatwebsite/excel
 */
